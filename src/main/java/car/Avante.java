@@ -1,23 +1,21 @@
 package car;
 
-public class Avante extends Car{
+public class Avante extends Car {
 
-    public Avante(int distance) {
-        super(distance);
-    }
-
-    @Override
-    double getDistancePerLiter() {
-        return fuelEfficiency;
-    }
-
-    @Override
-    double getTripDistance() {
-        return distance;
+    public Avante(double tripDistance) {
+        super(tripDistance);
     }
 
     @Override
     String getName() {
-        return this.name;
+        super.name = "Avante";
+        return super.name;
     }
+
+    @Override
+    double getDistancePerLiter() {
+        super.distancePerLiter = 15;
+        return super.distancePerLiter;
+    }
+
 }

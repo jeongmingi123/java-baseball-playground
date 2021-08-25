@@ -2,21 +2,24 @@ package car;
 
 public abstract class Car {
 
-    protected int liter;
-    protected int fuelEfficiency;
-    protected int distance;
+    protected double tripDistance;
     protected String name;
+    protected double distancePerLiter;
 
-    public Car(int distance) {
-        this.distance = distance;
+
+    public Car(double tripDistance) {
+        this.tripDistance = tripDistance;
     }
-
-    abstract double getDistancePerLiter();
-    abstract double getTripDistance();
-    abstract String getName();
 
     double getChargeQuantity() {
         return getTripDistance() / getDistancePerLiter();
     }
+    double getTripDistance(){
+        return this.tripDistance;
+    }
+
+    abstract String getName();
+
+    abstract double getDistancePerLiter();
 
 }
